@@ -6,7 +6,7 @@ import EpisodeList from '@/app/components/modules/EpisodeList';
 import BackButton from '@/app/components/elements/BackButton';
 
 interface AnimeDetailProps {
-  params: { id: string };
+  params: Promise<{ id: string }>
 }
 
 export default async function AnimeDetail({ params }: AnimeDetailProps) {

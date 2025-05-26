@@ -5,7 +5,7 @@ export const GET_ANIME_DETAIL = gql`
     Media (id: $id) {
       id
       title {
-          romaji
+        romaji
       }
       type
       status
@@ -13,17 +13,17 @@ export const GET_ANIME_DETAIL = gql`
       seasonYear
       episodes
       coverImage {
-          large
-          medium
+        large
+        medium
       }
       bannerImage
       genres
       popularity
       streamingEpisodes {
-          title
-          thumbnail
-          url
-          site
+        title
+        thumbnail
+        url
+        site
       }
       genres
     }

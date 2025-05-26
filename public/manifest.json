@@ -1,0 +1,16 @@
+{
+  "name": "AniList: Your Anime App",
+  "short_name": "AniList",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e40af",
+  "theme_color": "#3b82f6",
+  "description": "Discover and bookmark your favorite anime.",
+  "icons": [
+    {
+      "src": "/icons/anilist-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

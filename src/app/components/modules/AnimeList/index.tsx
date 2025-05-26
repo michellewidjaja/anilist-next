@@ -35,7 +35,8 @@ export default function AnimeList() {
       variables: {
         page: pageNum,
         perPage: 12,
-        genre: selectedGenre ? [selectedGenre] : undefined
+        genre: selectedGenre ? [selectedGenre] : undefined,
+        sort: ["TRENDING_DESC"],
       },
       fetchPolicy: "network-only",
     });
@@ -82,6 +83,7 @@ export default function AnimeList() {
       </div>
 
       <div className="mt-12">
+      <h5 className="text-md uppercase tracking-wide mb-4 font-bold">Trending Anime</h5>
       {isLoading ? (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <AnimeCardLoader />
