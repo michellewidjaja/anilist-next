@@ -31,8 +31,8 @@ export default async function AnimeDetail({ params }: AnimeDetailProps) {
 
       <div className="grid lg:grid-cols-2 gap-6">
         {
-          detail.bannerImage ? 
-            <Image src={detail.bannerImage} alt={detail.title.romaji} height={700} width={300} className="h-full w-full object-cover rounded" /> 
+          detail.coverImage ? 
+            <Image src={detail.coverImage.large} alt={detail.title.romaji} height={700} width={300} className="h-full w-full object-cover rounded" /> 
             : 
             <div></div>
         }

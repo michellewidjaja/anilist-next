@@ -8,7 +8,7 @@
   "description": "Discover and bookmark your favorite anime.",
   "icons": [
     {
-      "src": "/icons/anilist-192.png",
+      "src": "/icons/anilist-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
