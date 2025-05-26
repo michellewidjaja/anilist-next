@@ -15,11 +15,11 @@ export default function Button({
   children,
   icon,
 }: ButtonProps) {
-  const baseStyles = "flex gap-2 px-4 py-3 rounded-full text-white outline-none transition duration-300 flex-shrink-0 items-center hover:opacity-90";
+  const baseStyles = "flex gap-2 px-3 py-1 lg:px-3 lg:py-2  rounded-full text-white outline-none transition duration-300 flex-shrink-0 items-center hover:opacity-90";
   
   const typeStyles = type === "primary"
     ? "bg-gradient-to-b from-blue-500 to-indigo-500"
-    : "bg-transparent border border-white hover:border-blue hover:text-blue";
+    : "bg-transparent border border-gray hover:border-blue hover:text-blue text-gray";
 
   return (
     <button onClick={onClick} className={`${baseStyles} ${typeStyles}`}>

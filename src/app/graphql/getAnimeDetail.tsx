@@ -26,6 +26,7 @@ export const GET_ANIME_DETAIL = gql`
         site
       }
       genres
+      averageScore
     }
   }
 `;

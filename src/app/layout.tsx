@@ -34,7 +34,7 @@ export default function RootLayout({
         </div>
         <div className="fixed top-[-100px] right-[-100px] w-[400px] h-[400px] bg-gradient-to-r from-blue-700 to-pink-500 opacity-30 blur-3xl rounded-full z-0"></div>
 
-        <footer className="max-w-5xl mx-auto text-center my-4 text-sm">
+        <footer className="max-w-5xl mx-auto text-center my-4 text-sm p-6">
           &copy; {new Date().getFullYear()} <span className="text-blue">Michelle Lee Widjaja.</span><br />Built as a test project and personal showcase. Anime data powered by <a href="https://anilist.co" target="_blank" rel="noopener noreferrer" className="underline">AniList</a>.
         </footer>
       </body>

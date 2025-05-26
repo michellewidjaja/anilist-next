@@ -4,10 +4,19 @@ import { GET_ANIME_DETAIL } from '../../graphql/getAnimeDetail';
 import Bookmark from '@/app/components/modules/Bookmark';
 import EpisodeList from '@/app/components/modules/EpisodeList';
 import BackButton from '@/app/components/elements/BackButton';
+import { Star } from 'react-feather';
 
 interface AnimeDetailProps {
   params: Promise<{ id: string }>
 }
+
+const STATUS_LABELS: Record<string, string> = {
+  FINISHED: "Finished",
+  RELEASING: "Releasing",
+  NOT_YET_RELEASED: "Not Yet Released",
+  CANCELLED: "Cancelled",
+  HIATUS: "Hiatus",
+};
 
 export default async function AnimeDetail({ params }: AnimeDetailProps) {
   const resolvedParams = await params;
@@ -47,7 +56,7 @@ export default async function AnimeDetail({ params }: AnimeDetailProps) {
             }} />
           </div>
           <div className="flex justify-between items-center mt-5 mb-3">
-            <h1 className="text-2xl font-bold">{detail.title.romaji}</h1>
+            <h1 className="text-2xl font-bold text-white">{detail.title.romaji}</h1>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-3">
@@ -61,8 +70,28 @@ export default async function AnimeDetail({ params }: AnimeDetailProps) {
             ))}
           </div>
 
-          <div className="text-gray mb-5">
-            {detail.episodes} episode(s) &#x2022; {detail.status}
+          <div className="text-gray my-6 flex flex-col lg:flex-row gap-4">
+            {detail.episodes && (
+              <div className="flex flex-col bg-black-100 rounded-xl py-3 px-4">
+                <label className="text-sm mb-1">Total Episodes</label>
+                <b>{detail.episodes} episode(s)</b>
+              </div>
+            )}
+            {detail.status && (
+              <div className="flex flex-col bg-black-100 rounded-xl py-3 px-4">
+                <label className="text-sm mb-1">Status</label>
+                <b>{STATUS_LABELS[detail.status]}</b>
+              </div>
+            )}
+            {detail.averageScore && (
+              <div className="flex flex-col bg-black-100 rounded-xl py-3 px-4">
+                <label className="text-sm mb-1">Average Score</label>
+                <div className="flex items-center gap-1">
+                  <Star size={18} className="fill-current text-[#f7bf63]" />
+                  <span>{detail.averageScore}%</span>
+                </div>
+              </div>
+            )}
           </div>
 
           <div

@@ -34,15 +34,15 @@ export default function Bookmarks() {
   return (
     <>
       <BackButton backUrl="/">Back to List</BackButton>
-      <div className="flex justify-between items-center mb-12">
-        <h1 className="text-2xl font-bold mt-5 mb-6">Your Bookmarks</h1>
+      <div className="flex justify-between items-center flex-col lg:flex-row mb-12">
+        <h1 className="text-2xl font-bold mt-5 mb-6 text-white">Your Bookmarks</h1>
         {
           savedAnimeList.length > 0 &&
           <Button 
             onClick={handleResetBookmark}
             type="secondary"
             icon={ <X size={18} />}>
-            Reset Bookmarks
+            Reset
           </Button>
         }
       </div>
