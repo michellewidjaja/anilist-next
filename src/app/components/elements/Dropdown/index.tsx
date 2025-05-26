@@ -1,3 +1,4 @@
+import React from "react";
 import { ChevronDown } from "react-feather";
 
 interface DropdownProps {
@@ -34,7 +35,7 @@ export default function Dropdown({
         value={value} 
         disabled={disabled} 
         className="appearance-none w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none text-gray bg-black-100">
-          <option value={0}>{ placeholder|| "Select Options"}</option>
+          <option value={0}>{placeholder || "Select Options"}</option>
           {options.map((value, key) => (
             <option key={key} value={value}>
               {value}

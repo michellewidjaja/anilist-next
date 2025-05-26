@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { useState, useEffect, useCallback } from "react";
 import { GET_ANIME_LIST } from "../../../graphql/getAnimeList";
 import { GET_GENRES } from "@/app/graphql/getGenres";

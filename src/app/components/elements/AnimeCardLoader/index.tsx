@@ -1,3 +1,4 @@
+import React from "react";
 interface AnimeCardLoaderProps {
   cardColumn?: number;
 }
@@ -7,6 +8,7 @@ export default function AnimeCardLoader({
  return [...Array(cardColumn)].map((_, i) => (
   <div
     key={i}
+    role="article"
     className="animate-pulse rounded-lg bg-black-100 overflow-hidden"
   >
     <div className="bg-gray-700 w-full h-64" />
