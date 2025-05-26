@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #111010;
+  color: #858282;
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
   margin: 0;
