@@ -19,7 +19,7 @@ export default function Header() {
               size={24}
               className="text-white"
             />
-            Your Bookmark List
+            <span className="hidden lg:inline">Your Bookmark List</span>
           </Link>
         </Button>
       </nav>

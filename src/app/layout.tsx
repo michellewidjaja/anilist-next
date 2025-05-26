@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Anilist",
-  description: "Anilist is a platform for tracking and discovering anime and manga."
+  title: "AniList",
+  description: "AniList is a platform for tracking and discovering anime and manga."
 };
 
 export default function RootLayout({

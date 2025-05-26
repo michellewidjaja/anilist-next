@@ -29,10 +29,10 @@ export default async function AnimeDetail({ params }: AnimeDetailProps) {
     <div>
       <BackButton backUrl="/">Back to List</BackButton>
 
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="flex flex-col lg:flex-row gap-12">
         {
           detail.coverImage ? 
-            <Image src={detail.coverImage.large} alt={detail.title.romaji} height={700} width={300} className="h-full w-full object-cover rounded" /> 
+            <Image src={detail.coverImage.large} alt={detail.title.romaji} height={500} width={500} className="h-[250px] lg:h-[400px] w-full lg:w-[30%] object-contain rounded" /> 
             : 
             <div></div>
         }

@@ -14,9 +14,9 @@ interface EpisodeListProps {
 
 export default function EpisodeList({ streamingEpisodes }: EpisodeListProps) {
   return (
-    <div className="mt-8">
+    <div className="mt-16">
       <h2 className="text-xl font-semibold mb-4">Episode List</h2>
-      <ul className="grid lg:grid-cols-2 gap-4">
+      <ul className="grid lg:grid-cols-2 gap-3 lg:gap-4">
         {streamingEpisodes.map((episode: EpisodeDetailProps, index: number) => (
           <li
             key={index}
